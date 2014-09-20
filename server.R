@@ -1,5 +1,6 @@
 library(shiny)
 library(shinyTable)
+library(shinyBS)
 
 #' Define server logic required to generate simple table
 #' @author Jeff Allen \email{jeff@@trestletech.com}
@@ -52,9 +53,9 @@ shinyServer(function(input, output, session) {
   })
 
 metrics = c('Exposure', 'VaR', 'Instrument')
-  updateTypeAhead(session, inputId = "ta1", label = "Import as Metric:", choices = metrics)
+  shinyBS::updateTypeAhead(session, inputId = "ta1", label = "Import as Metric:", choices = metrics)
 IDs = c('iShares ETF', 'Vanguard Fund', 'Some Other Fund')
-updateTypeAhead(session, inputId = "ta2", label = "Import as ID:", choices = IDs)
+shinyBS::updateTypeAhead(session, inputId = "ta2", label = "Import as ID:", choices = IDs)
 
 })
 

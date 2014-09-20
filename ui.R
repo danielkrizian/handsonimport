@@ -1,5 +1,6 @@
 library(shiny)
 library(shinyTable)
+library(shinyBS)
 #' Define UI for application that demonstrates a simple Handsontable
 #' @author Jeff Allen \email{jeff@@trestletech.com}
 shinyUI(fluidPage(title="handsonimport",
@@ -11,11 +12,11 @@ shinyUI(fluidPage(title="handsonimport",
     fileInput('file1', label=HTML("Choose Spreadsheet File:  <br>(.xls, .xlsx, .csv) "),
               accept=c('text/csv', 'text/comma-separated-values,text/plain', '.csv')),
     hr(),
-    bsTypeAhead(inputId = "ta2", label = "Import as ID:",
+    shinyBS::bsTypeAhead(inputId = "ta2", label = "Import as ID:",
                 choices = c('iShares ETF', 'Vanguard Fund', 'Some Other Fund')),
 
     hr(),
-    bsTypeAhead(inputId = "ta1", label = "Import as Metric:",
+    shinyBS::bsTypeAhead(inputId = "ta1", label = "Import as Metric:",
                 choices = c('Exposure', 'VaR', 'Instrument')),
     hr(),
     dateInput("date", label = "Import as of Date:", value = "2014-01-01"),
