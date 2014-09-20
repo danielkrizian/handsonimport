@@ -8,6 +8,8 @@ Data inputs to R from spreadsheets made breeze with
 shiny::runGitHub("handsonimport", "danielkrizian") # mock-up only
 ```
 
+![mockup printscreen](https://raw.githubusercontent.com/danielkrizian/handsonimport/gh-pages/images/handsonimport-mockup.jpg)
+
 Features
 --------
 - [ ] Open Excel spreadsheet, turn it into editable Handsontable grid
